@@ -1,0 +1,54 @@
+{% extends 'base1.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}SignIn{% endblock title %}</title>
+
+</head>
+{% block body %}
+<body>
+
+    
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4 offset-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-center">
+                        LogIn
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="/signin">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div>
+                    <div class="card-footer text-center">
+                       Don't have account?
+                       <a href="signup">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock body %}
+
+</html>

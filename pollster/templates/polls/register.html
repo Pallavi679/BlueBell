@@ -1,0 +1,110 @@
+{% block content %}
+<style>
+    .bg-image {
+        background-image: url(/static/images/1.jpg);
+        filter: blur(4px);
+        height: 101vh;
+        width: 100wv;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-form {
+
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .15);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        border-radius: 0.85rem;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 35%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 42px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #15a000;
+        border-color: #15a000;
+        padding: 11px;
+        border-radius: 6px;
+    }
+
+    .btn-blue {
+        color: #fff;
+        background-color: #147aff;
+        border-color: #147aff;
+        padding: 11px;
+        border-radius: 6px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .user {
+
+        font-size: 20px;
+    }
+</style>
+
+<div class="bg-image"></div>
+<div class="login-form">
+    <h1>Sign up</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="user">
+            {{form.username.label}}
+            <div style="width: 50px; height: 10px;" class="spacer"></div>
+            {{form.username}}
+            <br>
+            <br>
+            <br>
+            <br>
+            {{form.password1.label}}
+            <div style="width: 50px; height: 10px;" class="spacer"></div>
+            {{form.password1}}
+            <br>
+            <br>
+            <br>
+            <br>
+            {{form.password2.label}}
+            <div style="width: 50px; height: 10px;" class="spacer"></div>
+            {{form.password2}}
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        {{form.errors}}
+        <!-- {% csrf_token %}
+        {% for field in form %}
+        <p>
+            {{ field.label_tag }}<br>
+            {{ field }}
+            {% if field.help_text %}
+            <small style="color: grey">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
+        </p>
+        {% endfor %} -->
+        <button class="btn btn-primary" type="submit" value="register">Sign up</button>
+    </form>
+</div>
+
+{% endblock %}

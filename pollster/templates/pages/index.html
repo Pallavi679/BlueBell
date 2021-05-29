@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .card-body h1 {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  .card-body p {
+    font-size: 1.6rem;
+    color: white;
+  }
+</style>
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1>Welcome To BlueBell</h1>
+    <p>Opinions Bring Revolution</p>
+    <a class="btn btn-primary" href="{% url 'polls:login' %}">
+      View Available Polls</a>
+    <a href="/admin" class="btn btn-primary">Create Poll</a>
+  </div>
+</div>
+{% endblock %}

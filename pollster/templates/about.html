@@ -1,0 +1,158 @@
+{% extends 'base1.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}About{% endblock title %}
+    </title>
+</head>
+
+<body>
+    {% block body %}
+    <div class="container  my-5 justify-content-start">
+        <h3 class="h3 text-center" id="aboutproject">Our Project</h3>
+        <div class="row">
+            <div class="col-md-6">
+                SE Mini Project Based on Python. We have used Python Framework Django for creating this Bluebell
+                website.
+                We try to create Polling set.
+                <br>
+                We have used sqlite as a database
+                <br>
+                Html, Css and Javascript in the Frontend
+                <br>
+                A survey is a research method used for collecting data from a predefined group of respondents to gain
+                information and insights into various topics of interest. ... The process involves asking people for
+                information through a questionnaire, which can be either online or offline.
+            </div>
+            <div class=" offset-md-2 col-md-4 border">
+                <img src="{% static 'report.jpg' %}" alt="" class='img-fluid img '>
+                <a href="{% static 'ROLL NO.docx' %}"> <i class="fas fa-download download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h3 class="h3 text-center">Our Team</h3>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="{% static 'Pallavi.jpeg' %}" class="rounded float-start img-fluid img-thumbnail" height=95px
+                    width=175px alt="...">
+
+            </div>
+            <div class="col-md-8">
+                <h4>Pallavi Pandey</h4>
+                <h4 class="h4">
+                    Persuing BE in Information Technology. Her coding skills have a great hand in
+                    enhancing the tools that our users use. With minute details taken care of her work helps other
+                    members enhance their part as well as put this user's at ease.
+                    </h3>
+                    <div class="standard_social_links">
+                        <div>
+                            <!-- <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+                            <!-- <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+
+                            <!-- <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-2">
+                <img src="{% static 'Akanksha.jpeg' %}" class="rounded float-start img-fluid img-thumbnail" height=95px
+                    width=175px alt="...">
+
+            </div>
+            <div class="col-md-8">
+                <h4>Akansha Jhurani</h4>
+                <h4 class="h4">
+                    Persuing BE in Information Technology. Her command is at creating content and
+                    handling the graphics part. She's the face that represents beautiful colours that are users see on
+                    their screen.
+                    </h3>
+                    <div class="standard_social_links">
+                        <div>
+                            <!-- <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+                            <!-- <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+
+                            <!-- <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-2">
+                <img src="{% static 'Pratibha.jpeg' %}" class="rounded float-start img-fluid img-thumbnail" height=95px
+                    width=175px alt="...">
+
+            </div>
+            <div class="col-md-8">
+                <h4>Pratibha Prasad</h4>
+                <h4 class="h4">
+                    Persuing BE in Information Technology. Her skills to attain all the drawbacks
+                    and check into what our user needs next is always handy when research is being made. All the
+                    resources and results are being taken care by her
+                    </h3>
+                    <div class="standard_social_links">
+                        <div>
+                            <!-- <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+                            <!-- <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                            <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram"
+                                        aria-hidden="true"></i></a>
+
+                            </li>
+
+                            <!-- <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+                      </li> -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+
+</body>
+
+</html>
